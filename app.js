@@ -44,7 +44,7 @@ app.engine('ejs',ejsMate);
 app.use(express.static(path.join(__dirname,"/public")))
 
 app.get("/",(req,res)=>{
-    res.send("Hey i am root");
+    res.redirect('/listings');
 })
 
 const store = MongoStore.create({
